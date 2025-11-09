@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belle Salon - Hair Services</title>
+  <link rel="stylesheet" href="style.css"> <!-- Your existing navbar CSS -->
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('https://images.pexels.com/photos/3993447/pexels-photo-3993447.jpeg') no-repeat center center/cover;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.4);
+    }
+    .hero h1 {
+      position: relative;
+      font-size: 40px;
+      background: rgba(0,0,0,0.5);
+      padding: 12px 30px;
+      border-radius: 8px;
+      z-index: 1;
+      
+    }
+ .hero p {
+      position: relative;
+      font-size: 20px;
+      background: rgba(96, 91, 91, 0.5);
+      padding: 12px 30px;
+      border-radius: 8px;
+      z-index: 1;
+      font-family: initial;
+      font-style: italic;
+    }
+
+    /* Layout: Sidebar + Content */
+    .container {
+      display: flex;
+      padding: 20px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 250px;
+      background: #111;
+      color: #fff;
+      border-radius: 6px;
+      padding: 20px;
+    }
+    .sidebar h2 {
+      margin-bottom: 15px;
+      font-size: 18px;
+      border-bottom: 1px solid #555;
+      padding-bottom: 8px;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar li {
+      margin: 12px 0;
+    }
+    .sidebar a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: #fff;
+      padding: 8px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .sidebar a img {
+      width: 25px;
+      height: 25px;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+    .sidebar a:hover,
+    .sidebar a.active {
+      background: linear-gradient(to right, #ebbccb, #db578a);
+      color: #000;
+      font-weight: bold;
+    }
+
+    /* Services List */
+    .services {
+      flex: 1;
+      margin-left: 20px;
+    }
+    .service-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+    .service-info {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .service-info img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .service-text h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #333;
+    }
+    .service-text p {
+      margin: 5px 0 0;
+      font-size: 14px;
+      color: #666;
+    }
+    .service-actions {
+      display: flex;
+      gap: 10px;
+    }
+    .btn {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .btn-book {
+      background: linear-gradient(to right, #646463, #81807e);
+      color: #fff;
+    }
+    .btn-view {
+      background: #fff;
+      border: 1px solid #de84ae;
+      color: #de84ae;
+    }
+    .btn-view:hover {
+      background: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+ <nav>
+    <div class="logo">Belle Salon</div>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="aboutus.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="booking.html" class="active">Booking</a> 
+    <button class="nav-btn" onclick="window.location.href='login.html'">LOGIN</button>
+  </nav>
+
+  <div class="service-actions">
+      <button class="btn btn-book" onclick="window.location.href='booking.html'">BOOK NOW</button>
+      <button class="btn btn-view">VIEW MORE</button>
+    </div>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Our Hair Services</h1>
+    <p style="margin:20px; font-size:25px; font-style: italic; color:#ffffff; line-height:1.6;font-family: initial;">
+At Belle Salon, we believe your hair deserves the best care and styling. <br> 
+Our expert stylists combine precision techniques with the latest trends to create looks that suit your personality <br>
+Whether it’s a simple trim, a bold makeover, or a nourishing spa treatment, we ensure every service leaves you feeling confident and refreshed.  
+</p>
+
+  </div>
+
+  <!-- Main Layout -->
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Hair</h2>
+      <ul>
+        <li><a href="#" class="active"><img src="https://www.lakmesalon.in/cdn/shop/files/1747815641933_cut.webp?v=1751359737" alt=""> Hair Cut</a></li>
+        <li><a href="#"><img src="https://www.lakmesalon.in/cdn/shop/files/1747815598542_color_473a077d-2f12-49f7-aeaa-9640be70be35.webp?v=1752568085" alt=""> Colors</a></li>
+        <li><a href="#"><img src="https://www.lakmesalon.in/cdn/shop/files/1747815577285_texture_0aa360d9-a091-4f85-906d-e5b47197c48d.webp?v=1752568146" alt=""> Textures</a></li>
+        <li><a href="#"><img src="https://www.lakmesalon.in/cdn/shop/files/1748521334103_spa-women_91d0e511-6fba-4922-b420-b535702f4390.webp?v=1752568183" alt=""> Hair Spa</a></li>
+        <li><a href="#"><img src="https://www.lakmesalon.in/cdn/shop/files/1747815619172_style_e30a6d45-4f00-4b38-901c-ffca8c4b7211.webp?v=1752568222" alt=""> Hair Style</a></li>
+      </ul>
+    </aside>
+
+    <!-- Services List -->
+    <section class="services">
+      <div class="service-item">
+        <div class="service-info">
+          <img src="https://www.lakmesalon.in/cdn/shop/files/Screenshot_4_medium.png?v=1751359782" alt="Hair Cut">
+          <div class="service-text">
+            <h3>Hair Cut - Designer</h3>
+            <p>⏱ 60 min</p>
+          </div>
+        </div>
+        <div class="service-actions">
+          <button class="btn btn-book">BOOK NOW</button>
+          <button class="btn btn-view">VIEW MORE</button>
+        </div>
+      </div>
+
+      <div class="service-item">
+        <div class="service-info">
+          <img src="https://www.lakmesalon.in/cdn/shop/files/Screenshot_4_medium.png?v=1751359782" alt="Senior Stylist">
+          <div class="service-text">
+            <h3>Hair Cut - Senior Stylist</h3>
+            <p>⏱ 60 min</p>
+          </div>
+        </div>
+        <div class="service-actions">
+          <button class="btn btn-book">BOOK NOW</button>
+          <button class="btn btn-view">VIEW MORE</button>
+        </div>
+      </div>
+
+      <div class="service-item">
+        <div class="service-info">
+          <img src="https://www.lakmesalon.in/cdn/shop/files/Screenshot_4_medium.png?v=1751359782" alt="Fringe">
+          <div class="service-text">
+            <h3>Hair Cut - Fringe</h3>
+            <p>⏱ 45 min</p>
+          </div>
+        </div>
+        <div class="service-actions">
+          <button class="btn btn-book">BOOK NOW</button>
+          <button class="btn btn-view">VIEW MORE</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belle Salon - Skin Services</title>
+  <link rel="stylesheet" href="style.css"> <!-- Your existing navbar CSS -->
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg') no-repeat center center/cover;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.4);
+    }
+    .hero h1 {
+      position: relative;
+      font-size: 40px;
+      background: rgba(0,0,0,0.5);
+      padding: 12px 30px;
+      border-radius: 8px;
+      z-index: 1;
+    }
+ .hero p {
+      position: relative;
+      font-size: 20px;
+      background: rgba(96, 91, 91, 0.5);
+      padding: 12px 30px;
+      border-radius: 8px;
+      z-index: 1;
+      font-family: initial;
+      font-style: italic;
+    }
+
+    /* Layout: Sidebar + Content */
+    .container {
+      display: flex;
+      padding: 20px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 250px;
+      background: #111;
+      color: #fff;
+      border-radius: 6px;
+      padding: 20px;
+    }
+    .sidebar h2 {
+      margin-bottom: 15px;
+      font-size: 18px;
+      border-bottom: 1px solid #555;
+      padding-bottom: 8px;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar li {
+      margin: 12px 0;
+    }
+    .sidebar a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: #fff;
+      padding: 8px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .sidebar a img {
+      width: 25px;
+      height: 25px;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+    .sidebar a:hover,
+    .sidebar a.active {
+      background: linear-gradient(to right, #de8096, #f4459c);
+      color: #000;
+      font-weight: bold;
+    }
+
+    /* Services List */
+    .services {
+      flex: 1;
+      margin-left: 20px;
+    }
+    .service-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+    .service-info {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .service-info img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .service-text h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #333;
+    }
+    .service-text p {
+      margin: 5px 0 0;
+      font-size: 14px;
+      color: #666;
+    }
+    .service-actions {
+      display: flex;
+      gap: 10px;
+    }
+    .btn {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .btn-book {
+      background: linear-gradient(to right, #e4839d, #ea436f);
+      color: #fff;
+    }
+    .btn-view {
+      background: #fff;
+      border: 1px solid #e687b9;
+      color: #4f4e4d;
+    }
+    .btn-view:hover {
+      background: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Belle Salon</div>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="aboutus.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="booking.html" class="active">Booking</a> 
+    <button class="nav-btn" onclick="window.location.href='login.html'">LOGIN</button>
+  </nav>
+
+  <!-- Hero Section -->
+    <div class="hero">
+    <h1>Our Skin Services</h1>
+    <p style="margin:20px; font-size:20px; color:#ffffff; line-height:1.6;font-family: initial;font-style: italic;">
+At Belle Salon, our skin care services focus on bringing out your natural glow and keeping your skin healthy.<br>  
+From rejuvenating facials to deep-cleansing treatments, we tailor each service to your unique skin type and needs.  <br>
+With expert care and premium products, we ensure every session leaves your skin refreshed, nourished, and radiant.  
+</p>
+
+  </div>
+
+  <!-- Main Layout -->
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Skin</h2>
+      <ul>
+        <li><a href="#" class="active"><img src="//www.lakmesalon.in/cdn/shop/files/1747816159920_cleanup.webp?v=1751280573" alt=""> Facials</a></li>
+        <li><a href="#"><img src="//www.lakmesalon.in/cdn/shop/files/1747816177279_body-care.webp?v=1751271907" alt=""> Body Care</a></li>
+        <li><a href="#"><img src="//www.lakmesalon.in/cdn/shop/files/1748947952220_cleanup_65313674-15d1-4a3c-b6c9-7db6ca54f234.webp?v=1752564892" alt=""> Clean Up</a></li>
+      </ul>
+    </aside>
+
+    <!-- Services List -->
+    <section class="services">
+      <div class="service-item">
+        <div class="service-info">
+          <img src="//www.lakmesalon.in/cdn/shop/files/facils_small.avif?v=1751717979" alt="Facial">
+          <div class="service-text">
+            <h3>Beauty Sutra Ritual</h3>
+            <p>⏱ 90 min</p>
+          </div>
+        </div>
+        <div class="service-actions">
+          <button class="btn btn-book">BOOK NOW</button>
+          <button class="btn btn-view">VIEW MORE</button>
+        </div>
+      </div>
+
+      <div class="service-item">
+        <div class="service-info">
+          <img src="//www.lakmesalon.in/cdn/shop/files/facils_small.avif?v=1751717979" alt="HydroBoost">
+          <div class="service-text">
+            <h3>HydroBoost Facial</h3>
+            <p>⏱ 60 min</p>
+          </div>
+        </div>
+        <div class="service-actions">
+          <button class="btn btn-book">BOOK NOW</button>
+          <button class="btn btn-view">VIEW MORE</button>
+        </div>
+      </div>
+
+      <div class="service-item">
+        <div class="service-info">
+          <img src="//www.lakmesalon.in/cdn/shop/files/facils_small.avif?v=1751717979" alt="Glow Facial">
+          <div class="service-text">
+            <h3>HydroBoost Glow Facial</h3>
+            <p>⏱ 75 min</p>
+          </div>
+        </div>
+        <div class="service-actions">
+          <button class="btn btn-book">BOOK NOW</button>
+          <button class="btn btn-view">VIEW MORE</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>

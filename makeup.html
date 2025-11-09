@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belle Salon - Makeup Services</title>
+  <link rel="stylesheet" href="2style.css"> <!-- Your existing navbar CSS -->
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('ssmakeup.png') no-repeat center center/cover ;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.4);
+    }
+    .hero h1 {
+      position: relative;
+      font-size: 40px;
+      background: rgba(0,0,0,0.5);
+      padding: 12px 30px;
+      border-radius: 8px;
+      z-index: 1;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      
+    }
+ .hero p {
+      position: relative;
+      font-size: 20px;
+      background: rgba(96, 91, 91, 0.5);
+      padding: 12px 30px;
+      border-radius: 8px;
+      z-index: 1;
+      font-family: initial;
+      font-style: italic;
+    }
+
+    /* Layout: Sidebar + Content */
+    .container {
+      display: flex;
+      padding: 20px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 250px;
+      background: #111;
+      color: #fff;
+      border-radius: 6px;
+      padding: 20px;
+      height: fit-content;
+    }
+    .sidebar h2 {
+      margin-bottom: 15px;
+      font-size: 18px;
+      border-bottom: 1px solid #555;
+      padding-bottom: 8px;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar li {
+      margin: 12px 0;
+    }
+    .sidebar a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: #fff;
+      padding: 8px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .sidebar a img {
+      width: 25px;
+      height: 25px;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+    .sidebar a:hover,
+    .sidebar a.active {
+      background: linear-gradient(to right, #f5b4e9, #db5fa0);
+      color: #000;
+      font-weight: bold;
+    }
+
+    /* Filter & Sort Bar */
+    .filter-sort {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fff;
+      padding: 15px 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .filter-sort select {
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #bbb;
+    }
+
+    /* Services List */
+    .services {
+      flex: 1;
+      margin-left: 20px;
+    }
+    .service-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+    .service-info {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .service-info img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .service-text h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #333;
+    }
+    .service-text p {
+      margin: 5px 0 0;
+      font-size: 14px;
+      color: #666;
+    }
+    .service-actions {
+      display: flex;
+      gap: 10px;
+    }
+    .btn {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .btn-book {
+      background: linear-gradient(to right, #c6426e, #642b73);
+      color: #fff;
+    }
+    .btn-view {
+      background: #fff;
+      border: 1px solid #c6426e;
+      color: #c6426e;
+    }
+    .btn-view:hover {
+      background: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Belle Salon</div>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="aboutus.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="booking.html" class="active">Booking</a> 
+    <button class="nav-btn" onclick="window.location.href='login.html'">LOGIN</button>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Makeup & Styling</h1>
+    <p style="margin:20px; color:#ffffff; line-height:1.6; font-style: italic; font-family: initial;">
+At Belle Salon, our makeup services are designed to bring out your natural beauty with a flawless finish.<br>  
+From bridal elegance to party glam and everyday chic looks, our expert artists craft styles that highlight your best features. <br> 
+We use premium products and techniques to ensure your makeup lasts long and feels comfortable, giving you confidence for every occasion.  
+</p>
+
+  </div>
+
+  <!-- Main Layout -->
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Makeup</h2>
+      <ul>
+        <li><a href="#" class="active"><img src="//www.lakmesalon.in/cdn/shop/files/1747815619172_style_e30a6d45-4f00-4b38-901c-ffca8c4b7211.webp?v=1752568222" alt=""> Bridal Makeup</a></li>
+        <li><a href="#"><img src="//www.lakmesalon.in/cdn/shop/files/1747815619172_style_e30a6d45-4f00-4b38-901c-ffca8c4b7211.webp?v=1752568222" alt=""> Party Makeup</a></li>
+        <li><a href="#"><img src="//www.lakmesalon.in/cdn/shop/files/1747815619172_style_e30a6d45-4f00-4b38-901c-ffca8c4b7211.webp?v=1752568222" alt=""> Eye Makeup</a></li>
+        <li><a href="#"><img src="//www.lakmesalon.in/cdn/shop/files/1747815619172_style_e30a6d45-4f00-4b38-901c-ffca8c4b7211.webp?v=1752568222" alt=""> Styling</a></li>
+      </ul>
+    </aside>
+
+    <!-- Services Section -->
+    <section class="services">
+      <!-- Filter & Sort -->
+      <div class="filter-sort">
+        <div>
+          <label for="filter">Filter by:</label>
+          <select id="filter">
+            <option>All</option>
+            <option>Bridal</option>
+            <option>Party</option>
+            <option>Eye</option>
+            <option>Styling</option>
+          </select>
+        </div>
+        <div>
+          <label for="sort">Sort by:</label>
+          <select id="sort">
+            <option>Latest</option>
+            <option>Duration: Shortest First</option>
+            <option>Duration: Longest First</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Services List -->
+       
+      <div class="service-item">
+        <div class="service-info">
+          <img src="https://www.lakmesalon.in/cdn/shop/files/1748943022482_eyes_medium.webp?v=1751346353" alt="Bridal Makeup">
+          <div class="service-text">
+            <h3>Bridal Makeup</h3>
+            <p>⏱ 180 min</p>
+          </div>
+        </div>
+        <div class="service-actions">
+          <button class="btn btn-book">BOOK NOW</button>
+          <button class="btn btn-view">VIEW MORE</button>
+        </div>
+      </div>
+
+      <div class="service-item">
+        <div class="service-info">
+          <img src="https://www.lakmesalon.in/cdn/shop/files/1748943022482_eyes_medium.webp?v=1751346353" alt="Party Makeup">
+          <div class="service-text">
+            <h3>Party Makeup</h3>
+            <p>⏱ 90 min</p>
+          </div>
+        </div>
+        <div class="service-actions">
+          <button class="btn btn-book">BOOK NOW</button>
+          <button class="btn btn-view">VIEW MORE</button>
+        </div>
+      </div>
+
+      <div class="service-item">
+        <div class="service-info">
+          <img src="https://www.lakmesalon.in/cdn/shop/files/1748943022482_eyes_medium.webp?v=1751346353" alt="Eye Makeup">
+          <div class="service-text">
+            <h3>Eye Makeup</h3>
+            <p>⏱ 45 min</p>
+          </div>
+        </div>
+        <div class="service-actions">
+          <button class="btn btn-book">BOOK NOW</button>
+          <button class="btn btn-view">VIEW MORE</button>
+        </div>
+      </div>
+
+      <div class="service-item">
+        <div class="service-info">
+          <img src="https://www.lakmesalon.in/cdn/shop/files/1748943022482_eyes_medium.webp?v=1751346353" alt="Hair Styling">
+          <div class="service-text">
+            <h3>Hair Styling with Makeup</h3>
+            <p>⏱ 60 min</p>
+          </div>
+        </div>
+        <div class="service-actions">
+          <button class="btn btn-book">BOOK NOW</button>
+          <button class="btn btn-view">VIEW MORE</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>
